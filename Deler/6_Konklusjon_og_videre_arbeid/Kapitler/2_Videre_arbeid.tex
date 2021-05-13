@@ -1,0 +1,25 @@
+\chapter{Videre arbeid}
+I dette kapitlet gås det gjennom videre arbeid med applikasjonen både med tanke på funksjonalitet og testing.
+
+\section{Mer reelle brukertester}
+For å få et bedre innblikk i hvordan applikasjonen ville fungert i en reell setting ville vi prøvd å i første omgang få til enkle brukertester med personer som driver med oppsynsturer til vanlig. Et ideelt scenario ville vært å være med en bonde eller gjeter på oppsynstur for å observere og gjøre tester på systemet.
+\newline
+
+\noindent
+Når applikasjonen etterhvert hadde blitt så klar at det hadde vært mulig å rulle den ut i en test-versjon på App Store for iOS og Google Play Store for Android, kunne vi kjørt tester innad i et beitelag. Dette ville gitt oss innsikt i hvordan funksjonaliteten som skal være med på å muliggjøre samhandling fungerer i praksis. Det ville også kunne være med på å sette en anslå eventuelle kostander applikasjonen vil ha i forbindelse med interaksjoner med database og autentisering gjennom Firebase.
+
+\section{Implementering av manglende og ønsket funksjonalitet}
+\subsection{Bakgrunnsoppdateringer av GPS-lokasjon på oppsynstur}
+For at applikasjonen skal fungere som ønsket i bakgrunnen mens man utfører en oppsynstur må det implementeres funksjonalitet som tillater at brukerens GPS-lokasjon hentes i bakgrunnen som selv om applikasjonen ikke er åpen. Per nå fant vi ingen eksisterende funksjonalitet som fungerte får vår løsning med tanke på dette. Det må derfor utvikles en ny Plugin for Capacitor som fungerer både for iOS og Android.
+
+\subsection{Endring og redigering av observasjoner under oppsynstur}
+Etter brukertestene kom det fram at det potensielt kan være nødvendig med funksjonalitet som tillater at brukeren har mulighet til å slette eller endre en registrert observasjon under en oppsynstur. Dette er funksjonalitet som i teorien burde være enkel å få på plass.
+
+\subsection{Redigering og sletting av registrerte oppsynsturer}
+Per nå er det ingen implementert funksjonalitet for at brukere, hverken bønder eller gjetere, kan redigere eller slette lagrede oppsynsturer. Dette er funksjonalitet som det potensielt kan være ønskelig at en super-brukere kan få lov ta nytte av hvis det har skjedd noe galt eller hvis en registrering viser seg å være feilaktig.
+
+\subsection{Brukerprofil med med mulighet for tilpasning av grensesnitt}
+Et av de funksjonelle kravene som ikke ble oppfylt var at brukerene skulle ha tilgang til en egen profil som kunne tilpasses etter eget ønske. Tanken her er å muliggjøre å tilpasse grensesnittet og funksjonalitet slik at det passer med beitelaget og brukeren. Et eksempel er å ha mulighet til å endre posisjonen for enkelte knapper slik at de er lettere å nå for personer som bruker mobilen med venstre hånd. Per nå er alle slike knapper designet for høyrehendte. Det kan også forekomme at farger på slips har forskjellige betydninger basert på hvilket beitelag man er medlem i. Mulighet for å endre dette burde være tilgjengelig gjennom en slik brukerprofil.
+
+\section{Implementering av web-grensesnitt for bønder}
+Det er også ønskelig å implementere en fullverdig web-applikasjon som primært skal brukes av bonden. Selv om det er mulig å se gjennom alle registrerte oppsynsturer på mobilapplikasjonen er funksjonaliteten man kan tillate seg å implementere på et så fysisk lite grensesnittet begrenset. Web-applikasjonen til bonden ville da inneholdt funksjonalitet som vil gjøre det lettere å inspisere de ulike oppsynsturene som er godt.

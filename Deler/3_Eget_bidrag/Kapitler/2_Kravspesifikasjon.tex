@@ -1,0 +1,78 @@
+\chapter{Kravspesifikasjon}
+Dette kapitlet tar for seg kravene som ble utviklet sammen med fungerende produkteier Professor Hvasshovd før og under utviklingen av applikasjonen. Kravene er delt i to i form av funksjonelle krav og ikke-funksjonelle krav. Både de funksjonelle og de ikke-funksjonelle kravene er nummerert og organisert inn i undergrupper. Hvert krav har også en prioritet som forteller hvor viktig det har vært å få implementert det spesifikke kravet. Krav som var absolutt nødvendige for at applikasjonen skulle regnes som ferdig ble merket med prioriteringen \enquote{Høy}. Krav som ikke nødvendigvis måtte implementeres for at applikasjonen skulle regnes som ferdig, men som ville gjøre applikasjonen betydelig bedre er merket med prioriteringen \enquote{Middels}. Til sist er krav som ikke er nødvendig for applikasjonen i det hele tatt, men som ville vært fint å ha med, merket med prioriteringen \enquote{Lav}.
+
+\section{Funksjonelle krav} \label{sec:funksjonelle-krav}
+Tabell \ref{tbl:funksjonelle-krav} viser alle de funksjonelle kravene som har blitt utviklet i løpet av prosjektet. Med funksjonelle krav menes krav stilt til funksjonaliteten brukeren skal ha tilgang til under bruk av applikasjonen.
+\begin{table}[H]
+    \centering 
+    \begin{tabular}{| p{0.1\linewidth} | p{0.7\linewidth} | p{0.1\linewidth} |}
+       \hline
+        Nr. & Beskrivelse & Prioritet \\
+        \hline \hline
+        F1 & Brukeren skal ha tilgang til de mest oppdaterte kartbildene, som skal løses ved hjelp av Karverkets tjenester (NorgesKart). & Høy \\ 
+        \hline
+        F1.1 & Brukeren skal kunne laste ned et utsnitt av kartet til offline bruk. & Høy \\ 
+        \hline
+        F1.2 & Ved bruk av kart skal brukeren kunne se sin posisjon, samt en linje over kartlagte bevegelser. & Høy \\
+        \hline
+        F1.3 & Brukeren skal kunne legge til observasjoner på kartet i form av pins. & Middels \\
+        \hline
+        F2 & Brukeren skal kunne registrere en ny oppsynstur. & Høy \\ 
+        \hline
+        F2.1 & Brukeren skal kunne ha mulighet til å fylle ut nødvendig informasjon om en oppsynstur. & Høy \\ 
+        \hline
+        F2.3 & Brukeren skal kunne registrere saueflokker på beitet med informasjon som gjør det mulig å kjenne igjen den spesifikke saueflokken ved et senere tidspunkt. & Høy \\
+        \hline
+        F2.3.1 & Brukeren skal kunne registrere totalt antall sau i en flokk. & Høy \\
+        \hline
+        F2.3.2 & Brukeren skal kunne registrere antall av hver farge på sauene i flokken. & Høy \\
+        \hline
+        F2.3.3 & Brukeren skal kunne registrere antall søyer og lam i flokken. & Høy \\
+        \hline
+        F2.3.4 & Brukeren skal kunne registrere antall av søyer med slips og farge på slipset. & Høy \\
+        \hline    
+        F2.3.5 & Brukeren skal kunne legge inn øremerking i registreringen. & Høy \\
+        \hline
+        F2.3.6 & Brukeren skal kunne legge til egne øremerker med navnet på tilhørende bonde og farge på øremerket. & Høy \\
+        \hline
+        F2.3.7 & Brukeren skal kunne legge til øremerker hvor et øremerker kan ha en eller flere egendefinerte farger. & Middels \\
+        \hline
+        F2.3.8 & Systemet skal gi brukeren tilbakemelding dersom det forekommer avvik, mellom f.eks. antall registrerte slips og lam, i registreringen. & Middels \\
+        \hline
+        F2.4 & Registreringer skal lagres eksternt. & Middels \\
+        \hline
+        F3 & Systemet skal ha innlogging med brukernavn og passord. & Høy \\
+        \hline
+        F3.1 & Brukeren skal ha egen profil og mulighet til å se og endre på den. & Lav \\
+        \hline
+        F4 & Brukeren skal kunne registrere forskjellig informasjon om saueflokker uten å måtte være nødt til å se på selve brukergrensesnittet. & Høy \\
+        \hline
+        F4.1 & Brukeren skal få verbale tilbakemeldinger om utførte handlinger under blind bruk slik at brukeren slipper å se på skjermen. & Høy \\
+        \hline
+        F4.2 & Brukeren skal få haptisk tilbakemelding i form av vibrasjoner i mobiltelefonen når skjermen trykkes på under blind bruk. & Høy \\
+        \hline
+    \end{tabular}
+    \caption{Tabell som viser funksjonelle krav for applikasjonen.}
+    \label{tbl:funksjonelle-krav}
+\end{table}
+
+\section{Ikke-funksjonelle krav}  \label{sec:ikke-funksjonelle-krav}
+De ikke-funksjonelle kravene vises i tabell \ref{tbl:ikke-funksjonelle-krav}. Med ikke-funksjonelle krav menes krav til applikasjonen som ikke er knyttet opp til funksjonalitet som brukeren benytter seg av direkte.
+\begin{table}[H]
+    \centering 
+    \begin{tabular}{| p{0.1\linewidth} | p{0.7\linewidth} | p{0.1\linewidth} |}
+       \hline
+        Nr. & Beskrivelse & Prioritet \\
+        \hline \hline
+        IF1 & Applikasjonen skal fungere uten internett. & Høy \\ 
+        \hline
+        IF2 & Applikasjonen skal være kryssplattform og fungere på mobile enheter med både Android og iOS. & Høy \\
+        \hline
+        IF3 & Applikasjonen skal tillate bruk på inntil 10 timer uten tilgang på strøm. & Lav \\ 
+        \hline
+        IF4 & Blind registrering av sau skal være så effektiv som mulig. & Høy \\ 
+        \hline
+    \end{tabular}
+    \caption{Tabell som viser ikke-funksjonelle krav for applikasjonen.}
+    \label{tbl:ikke-funksjonelle-krav}
+\end{table}

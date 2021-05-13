@@ -1,0 +1,94 @@
+\documentclass[twoside, openright, 10pt]{memoir}
+\usepackage{textcomp}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[scaled=.88]{berasans}       % sans serif font
+\renewcommand*\familydefault{\sfdefault}  % Only if the base font of the document is to be sans serif
+\linespread{1.15} % Setter linjeavstand til 1.15
+\usepackage{enumitem} %For å gjøre tallene i en enumerate bold
+% \usepackage[margin=1in]{geometry} %Utvide teksten ut til margin
+\usepackage{geometry} %Utvide teksten ut til margin
+\usepackage{graphicx} %For bilder
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{fancyhdr} %For å endre på header og footer
+\pagestyle{fancy}
+\fancyhead[L]{\nouppercase{\leftmark}} %For å bare ha kaptit\tel i header (på venstre side)
+\fancyhead[R]{\thepage} %For å ha sidetall på høyre side i header
+\usepackage{url} %For at referansen ikke går utenfor siden
+\usepackage[hidelinks]{hyperref} %For å gjøre innholdslisten klikkbar
+\usepackage[acronym, toc]{glossaries} %For akronymer
+\usepackage{caption} %For å legge til Kilde i bildecaption 
+\usepackage{csquotes} %For å referere i blokker osv...s  
+\usepackage{pdfpages} %For å ha pdfer som går over flere sider
+\usepackage{afterpage} %For å få en blank side
+\usepackage{makecell}
+\usepackage{longtable}
+\usepackage{array}
+\newcolumntype{C}[1]{>{\arraybackslash}p{#1}}
+
+\raggedbottom
+
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    \addtocounter{page}{-1}%
+    \newpage}
+\renewcommand{\appendixtocname}{Vedlegg} %For å endre navn fra Appendices til Vedlegg i TOC
+\setsecnumdepth{subsection}
+
+\makeglossaries
+
+\title{Masteroppgave}
+\author{Kimia og Trym}
+\date{January 2021}
+
+\renewcommand*{\arraystretch}{1.5} % For å gjøre radene i tabellene litt høyere
+
+\renewcommand*\contentsname{Innhold}
+\renewcommand{\bibname}{Referanser}
+\renewcommand{\partname}{Del}
+\renewcommand{\chaptername}{Kapittel}
+\renewcommand{\listfigurename}{Figurer}
+\renewcommand{\listtablename}{Tabeller}
+\renewcommand{\figurename}{Figur}
+\renewcommand{\appendixname}{Vedlegg}
+\renewcommand{\appendixpagename}{Vedlegg}
+\newcommand{\source}[1]{\caption*{Bildekilde: {#1}}}
+
+% For å gjøre sånn at det kommer tekst med på "Del"-siden.
+\let\Part\part
+\renewcommand\part[2][]{{\let\newpage\relax
+  \ifx\relax#1\relax\Part{#2}\else\Part[#1]{#2}\fi}}
+
+\begin{document}
+
+\bibliographystyle{./IEEEtranUrldate.bst}
+\frontmatter
+
+\include{title}
+\include{Forord_og_sammendrag/1_Sammendrag}
+\include{Forord_og_sammendrag/2_Forord}
+\cleardoublepage
+\tableofcontents*
+\cleardoublepage
+\listoffigures
+\include{akronymer}
+\printglossary[type=\acronymtype, title=Akronymer]
+\mainmatter
+
+\include{Deler/1_Introduksjon/Introduksjon}
+% \openleft
+\include{Deler/2_Bakgrunn/Bakgrunn}
+\include{Deler/3_Eget_bidrag/Eget_bidrag}
+\include{Deler/4_Resultater/Resultater}
+\include{Deler/5_Diskusjon/Diskusjon}
+\include{Deler/6_Konklusjon_og_videre_arbeid/Konklusjon_og_videre_arbeid}
+
+\bibliography{references_zotero_dropbox}
+\appendixpage
+\begin{appendices}
+\chapter{Rapportskjerma} \label{rapportskjema}
+\includepdf[pages={1-}]{Vedlegg/Rapportskjema_tilsyn.pdf}
+\end{appendices}
+\end{document}

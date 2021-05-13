@@ -1,0 +1,13 @@
+\chapter{Gjennomgang av kravspesifikasjonen}
+
+\section{Gjennomgang av Funksjonelle krav}
+De funksjonelle kravene for applikasjonen beskrives i tabell \ref{tbl:funksjonelle-krav} i underkapittel \ref{sec:funksjonelle-krav} \nameref{sec:funksjonelle-krav} og ble satt av Professor Hvasshovd i starten og underveis i prosjektet. Gjennom prosjektet har nesten alle de funksjonelle kravene blitt oppnådd eller delvis oppnådd. Dette underkapitlet tar for seg de kravene som ikke ble innfridd fullstendig.
+
+\subsection{F1.2 (delvis oppnådd)}
+Det funksjonelle kravet F1.2 har beskrivelsen \enquote{Ved bruk av kart skal brukeren kunne se sin posisjon, samt en linje over kartlagte bevegelser.}. Dette kravet er å regne som delvis oppnådd. Ved normal bruk vil applikasjonen registrere GPS-lokasjonen til brukeren og vise både nåværende posisjon som en linje over den traverserte ruten. Ettersom at implementasjon av bakgrunnsoppdatering av GPS-lokasjon ikke ble implementert vil ikke den ruten brukeren går når applikasjonen er lukket bli registrert.
+
+\subsection{F3.1 (ikke oppnådd)}
+Det funksjonelle kravet F3.1 har beskrivelsen \enquote{Brukeren skal ha egen profil og mulighet til å se og endre på den}. Kravet har prioritet \textit{Lav} og det ble derfor ikke prioritert under utviklingen av applikasjonen. Likevel har det blitt opprettet en egen \textit{Collection} for brukere i Firebase Cloud Firestore, og dermed er det eneste som gjenstår for å få en profil opp å gå er implementasjonen av brukergrensesnittet for å gjøre endringer på den.|
+
+\section{Gjennomgang av ikke-funksjonelle krav}
+De ikke-funksjonelle kravene IF1, IF2 og IF4 fra tabell \ref{tbl:ikke-funksjonelle-krav} er nådd. All funksjonalitet har blitt testet for både iOS og Android, både med og uten tilgang til internett. For IF4 har grensesnittet for blind bruk i denne applikasjonenhar har blitt implementert på bakgrunn av resultatene rundt brukervennlighet og effektivitet funnet i brukertestene under fordypningsprosjektet \cite[~s.64]{Abtahi2020TilsynBeite}. IF3 har ikke blitt testet per dags dato.
